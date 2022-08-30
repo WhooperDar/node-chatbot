@@ -1,0 +1,16 @@
+{
+  "name": "first_chatbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "train": "node train.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Kim Darius Panis",
+  "license": "ISC",
+  "dependencies": {
+    "node-nlp": "^4.24.0"
+  }
+}
