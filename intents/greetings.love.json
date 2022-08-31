@@ -1,0 +1,12 @@
+{
+    "questions": [
+        "i love you",
+        "i miss you", 
+        "i like you"
+    ], 
+    "answers": [ 
+        "i love you too",
+        "i miss you too", 
+        "i like you too"
+    ]
+}

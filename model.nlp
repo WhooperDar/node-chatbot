@@ -49,8 +49,8 @@
             "intent": "greetings.bye",
             "domain": "default"
           },
-          "hello": {
-            "intent": "greetings.hello",
+          "farewel": {
+            "intent": "greetings.bye",
             "domain": "default"
           },
           "hi": {
@@ -64,11 +64,32 @@
           "greet": {
             "intent": "greetings.hello",
             "domain": "default"
+          },
+          "goodby,hi": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hello,wildcat": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "i,love,you": {
+            "intent": "greetings.love",
+            "domain": "default"
+          },
+          "i,miss,you": {
+            "intent": "greetings.love",
+            "domain": "default"
+          },
+          "i,like,you": {
+            "intent": "greetings.love",
+            "domain": "default"
           }
         },
         "intentDict": {
           "greetings.bye": "default",
-          "greetings.hello": "default"
+          "greetings.hello": "default",
+          "greetings.love": "default"
         },
         "sentences": [
           {
@@ -93,12 +114,12 @@
           },
           {
             "domain": "default",
-            "utterance": "hello",
-            "intent": "greetings.hello"
+            "utterance": "farewell",
+            "intent": "greetings.bye"
           },
           {
             "domain": "default",
-            "utterance": "hi",
+            "utterance": "Hi",
             "intent": "greetings.hello"
           },
           {
@@ -110,6 +131,31 @@
             "domain": "default",
             "utterance": "Greetings",
             "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi, goodbye",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hello wildcat",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "i love you",
+            "intent": "greetings.love"
+          },
+          {
+            "domain": "default",
+            "utterance": "i miss you",
+            "intent": "greetings.love"
+          },
+          {
+            "domain": "default",
+            "utterance": "i like you",
+            "intent": "greetings.love"
           }
         ],
         "domains": {
@@ -136,14 +182,20 @@
               "i": 1,
               "must": 1,
               "go": 1,
-              "hello": 1,
+              "farewel": 1,
               "hi": 1,
               "howdi": 1,
-              "greet": 1
+              "greet": 1,
+              "hello": 1,
+              "wildcat": 1,
+              "love": 1,
+              "miss": 1,
+              "like": 1
             },
             "intents": {
               "greetings.bye": 1,
-              "greetings.hello": 1
+              "greetings.hello": 1,
+              "greetings.love": 1
             },
             "intentFeatures": {
               "greetings.bye": {
@@ -156,18 +208,29 @@
                 "later": 1,
                 "i": 1,
                 "must": 1,
-                "go": 1
+                "go": 1,
+                "farewel": 1
               },
               "greetings.hello": {
-                "hello": 1,
                 "hi": 1,
                 "howdi": 1,
-                "greet": 1
+                "greet": 1,
+                "goodby": 1,
+                "hello": 1,
+                "wildcat": 1
+              },
+              "greetings.love": {
+                "i": 1,
+                "love": 1,
+                "you": 1,
+                "miss": 1,
+                "like": 1
               }
             },
             "featuresToIntent": {
               "goodby": [
-                "greetings.bye"
+                "greetings.bye",
+                "greetings.hello"
               ],
               "bye": [
                 "greetings.bye"
@@ -182,13 +245,15 @@
                 "greetings.bye"
               ],
               "you": [
-                "greetings.bye"
+                "greetings.bye",
+                "greetings.love"
               ],
               "later": [
                 "greetings.bye"
               ],
               "i": [
-                "greetings.bye"
+                "greetings.bye",
+                "greetings.love"
               ],
               "must": [
                 "greetings.bye"
@@ -196,8 +261,8 @@
               "go": [
                 "greetings.bye"
               ],
-              "hello": [
-                "greetings.hello"
+              "farewel": [
+                "greetings.bye"
               ],
               "hi": [
                 "greetings.hello"
@@ -207,6 +272,21 @@
               ],
               "greet": [
                 "greetings.hello"
+              ],
+              "hello": [
+                "greetings.hello"
+              ],
+              "wildcat": [
+                "greetings.hello"
+              ],
+              "love": [
+                "greetings.love"
+              ],
+              "miss": [
+                "greetings.love"
+              ],
+              "like": [
+                "greetings.love"
               ]
             },
             "neuralNetwork": {
@@ -232,49 +312,87 @@
                 "i",
                 "must",
                 "go",
-                "hello",
+                "farewel",
                 "hi",
                 "howdi",
-                "greet"
+                "greet",
+                "hello",
+                "wildcat",
+                "love",
+                "miss",
+                "like"
               ],
               "intents": [
                 "greetings.bye",
-                "greetings.hello"
+                "greetings.hello",
+                "greetings.love"
               ],
               "perceptrons": [
                 [
-                  10.491856575012207,
-                  3.5693626403808594,
-                  3.5693626403808594,
-                  3.5693626403808594,
-                  3.5693156719207764,
-                  3.5693156719207764,
-                  3.5693156719207764,
-                  3.5692670345306396,
-                  3.5692670345306396,
-                  3.5692670345306396,
-                  -3.5351028442382812,
-                  -3.5235469341278076,
-                  -3.5113301277160645,
-                  -3.4984614849090576,
-                  3.5662438108719106
+                  9.111922264099121,
+                  3.0376155376434326,
+                  3.0376155376434326,
+                  3.0376155376434326,
+                  5.287230014801025,
+                  -1.4616161584854126,
+                  5.287230014801025,
+                  -1.4616177082061768,
+                  5.287230968475342,
+                  5.287230968475342,
+                  9.112892150878906,
+                  -14.284224510192871,
+                  -5.172819137573242,
+                  -5.172816276550293,
+                  -2.5864133834838867,
+                  -2.5864133834838867,
+                  -2.24961519241333,
+                  -2.2496135234832764,
+                  -2.24961256980896,
+                  5.172850135390047
                 ],
                 [
-                  -6.925255298614502,
-                  -2.378720283508301,
-                  -2.378720283508301,
-                  -2.378720283508301,
-                  -2.3786611557006836,
-                  -2.3786611557006836,
-                  -2.3786611557006836,
-                  -2.3786001205444336,
-                  -2.3786001205444336,
-                  -2.3786001205444336,
-                  7.09586763381958,
-                  7.1043925285339355,
-                  7.087621688842773,
-                  7.069581031799316,
-                  7.14764359466078
+                  -1.109675645828247,
+                  -1.8428349494934082,
+                  -1.8428349494934082,
+                  -1.8428349494934082,
+                  -1.235016107559204,
+                  -3.0478763580322266,
+                  -1.235016107559204,
+                  -3.045515775680542,
+                  -1.2326565980911255,
+                  -1.2326565980911255,
+                  -5.111130714416504,
+                  13.194814682006836,
+                  12.56937026977539,
+                  12.565658569335938,
+                  6.298264026641846,
+                  6.298264026641846,
+                  -0.6378817558288574,
+                  -0.5675398707389832,
+                  -0.46231675148010254,
+                  1.645263735805217
+                ],
+                [
+                  -0.5488753318786621,
+                  -0.3088388442993164,
+                  -0.3088388442993164,
+                  -0.3088388442993164,
+                  -2.9090664386749268,
+                  5.623417377471924,
+                  -2.9090664386749268,
+                  5.623417854309082,
+                  -2.909066677093506,
+                  -2.909066677093506,
+                  -0.30737271904945374,
+                  -0.37404265999794006,
+                  -0.2977198660373688,
+                  -0.2885006368160248,
+                  -0.20107631385326385,
+                  -0.20107631385326385,
+                  2.8441615104675293,
+                  2.8441638946533203,
+                  2.8441615104675293,
+                  0.19471627407579267
                 ]
               ]
             }
@@ -302,11 +420,11 @@
       ],
       [
         "en",
-        "hello"
+        "farewell"
       ],
       [
         "en",
-        "hi"
+        "Hi"
       ],
       [
         "en",
@@ -315,6 +433,26 @@
       [
         "en",
         "Greetings"
+      ],
+      [
+        "en",
+        "hi, goodbye"
+      ],
+      [
+        "en",
+        "hello wildcat"
+      ],
+      [
+        "en",
+        "i love you"
+      ],
+      [
+        "en",
+        "i miss you"
+      ],
+      [
+        "en",
+        "i like you"
       ]
     ]
   },
@@ -344,6 +482,9 @@
           },
           {
             "answer": "have a great day"
+          },
+          {
+            "answer": "have a nice day ahead"
           }
         ],
         "greetings.hello": [
@@ -351,13 +492,27 @@
             "answer": "Hey there!"
           },
           {
-            "answer": "Hello"
+            "answer": "Hello, mate"
           },
           {
-            "answer": "Hi"
+            "answer": "Hi, how are you?"
           },
           {
-            "answer": "Greetings"
+            "answer": "Greetings, how's the day?"
+          },
+          {
+            "answer": "See you, how's the day?"
+          }
+        ],
+        "greetings.love": [
+          {
+            "answer": "i love you too"
+          },
+          {
+            "answer": "i miss you too"
+          },
+          {
+            "answer": "i like you too"
           }
         ]
       }

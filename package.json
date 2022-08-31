@@ -11,6 +11,7 @@
   "author": "Kim Darius Panis",
   "license": "ISC",
   "dependencies": {
-    "node-nlp": "^4.24.0"
+    "node-nlp": "^4.24.0",
+    "say": "^0.16.0"
   }
 }

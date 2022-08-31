@@ -1,14 +1,16 @@
 {
-    "questions": [
-        "hello", 
-        "hi", 
+    "questions": [ 
+        "Hi", 
         "howdy", 
-        "Greetings" 
+        "Greetings",
+        "hi, goodbye", 
+        "hello wildcat"
     ], 
     "answers": [
         "Hey there!", 
-        "Hello", 
-        "Hi", 
-        "Greetings"
+        "Hello, mate", 
+        "Hi, how are you?", 
+        "Greetings, how's the day?", 
+        "See you, how's the day?"
     ]
 }
